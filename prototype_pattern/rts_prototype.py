@@ -74,10 +74,6 @@ class Barracks(object):
                 1: Knight(1),
                 2: Knight(2)
             },
-            "archer": {
-                1: Archer(1),
-                2: Archer(2)
-            },
             "rogue": {
                 1: Rogue(1),
                 2: Rogue(2)
@@ -87,11 +83,24 @@ class Barracks(object):
     def build_unit(self, unit_type, level):
         return self.units[unit_type][level].clone()
 
+class ArcheryRange(object):
+    def __init__(self):
+        self.units = {
+            "archer": {
+                1: Archer(1),
+                2: Archer(2)
+            }
+        }
+
+    def build_unit(self, unit_type, level):
+        return self.units[unit_type][level].clone()
+
 if __name__ == "__main__":
     barracks = Barracks()
     knight1 = barracks.build_unit("knight", 1)
-    archer1 = barracks.build_unit("archer", 2)
     rogue1 = barracks.build_unit("rogue", 1)
+    range = ArcheryRange()
+    archer1 = range.build_unit("archer", 2)
     print("[knight1] {}".format(knight1))
     print("[archer1] {}".format(archer1))
     print("[rogue1] {}".format(rogue1))
