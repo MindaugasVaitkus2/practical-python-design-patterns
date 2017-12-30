@@ -56,7 +56,9 @@ if __name__ == '__main__':
             if pressed[pygame.K_UP]: obj.move('up')
             if pressed[pygame.K_DOWN]: obj.move('down')
             if pressed[pygame.K_LEFT]: obj.move('left')
-            if pressed[pygame.K_RIGHT]: ojb.move('right')
+            if pressed[pygame.K_RIGHT]: obj.move('right')
+            if pressed[pygame.K_s]: obj = Square(obj.x, obj.y)
+            if pressed[pygame.K_c]: obj = Circle(obj.x, obj.y)
 
             screen.fill((0, 0, 0))
             obj.draw()
