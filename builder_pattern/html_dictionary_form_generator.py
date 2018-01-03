@@ -22,7 +22,7 @@ def generate_checkbox(checkbox_dict):
     return '<label><input type="checkbox" id="{0}" value="{1}"> {2}<br>'.format(
         checkbox_dict["id"],
         checkbox_dict["value"],
-        checkbox_dict["lable"]
+        checkbox_dict["label"]
     )
 
 def build_html_form(field_list):
