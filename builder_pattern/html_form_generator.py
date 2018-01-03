@@ -22,6 +22,7 @@ def build_html_form(text_field_list=[], checkbox_field_list=[]):
                     text_field_list=text_field_list,
                     checkbox_field_list=checkbox_field_list
                 )
+            )
         )
 
 if __name__ == "__main__":
