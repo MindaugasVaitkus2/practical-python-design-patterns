@@ -8,7 +8,7 @@ def generate_webform(field_list):
     return "<form>{fields}</form>".format(fields=generated_fields)
 
 def build_html_form(fields):
-    with open("form_file.hmtl", w) as f:
+    with open("form_file.hmtl", 'w') as f:
         f.write(
             "<html><body>{}</body></html>".format(generate_webform(fields))
         )
