@@ -13,6 +13,6 @@ def build_html_form(fields):
             "<html><body>{}</body></html>".format(generate_webform(fields))
         )
 
-if __name__ = "__main__":
+if __name__ == "__main__":
     fields = ["name", "age", "email", "telephone"]
     build_html_form(fields)
